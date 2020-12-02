@@ -1,0 +1,23 @@
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width:100%;
+}
+.main {
+
+    display: flex;
+    flex-direction: row;
+    width:100%;
+}
+.card1 , .card2 , .card3 , .card4, .card5 {
+
+    margin: 50px;
+}
+.header {
+   align-items: center;
+text-align: center;
+}
+input{
+    margin-top: 50px;
+}
