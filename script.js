@@ -1,39 +1,36 @@
 (function() {
 // my API KEY
-var apiKey = "4950ba99cd0faf25fafb6f37967c0ead";
+
 var apiKeyLocation = "3fb726164f694e7d96c34f856af327c4";
 var city2
+
 
 // geolocalisation function
     function getLocation() {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(showPosition);
+
+
+
         } else {
             alert("Geolocation is not supported by this browser.");
         }
     }
 
     function showPosition(position) {
-        var lat =  position.coords.latitude;
+        var lat = position.coords.latitude;
         var long = position.coords.longitude;
-        console.log(lat , long)
-
-    fetch('https://api.opencagedata.com/geocode/v1/json?q='+lat+","+long+'&key='+apiKeyLocation )
-        .then(location => location.json())
-        .then(data => {
-           city2 = data.results[0].components.city
-            console.log(city2)
-            fetch('https://api.openweathermap.org/data/2.5/forecast?q='+city2+'&appid='+apiKey)
-                .then(weather => weather.json())
-                .then(data => {
-                    drawWeather(data)
-                    console.log(data)
-                } )
-                .catch(err => {
-                    console.log(err);})
-        } )
-        .catch(err => {
-            console.log(err);})
+        console.log(lat, long)
+        fetch('https://api.opencagedata.com/geocode/v1/json?q='+lat+","+long+'&key='+apiKeyLocation )
+            .then(location => location.json())
+            .then(data => {
+                city2 = data.results[0].components.city
+                console.log(city2)
+                ToFetch(city2)
+                FetchPhoto(city2);
+            } )
+            .catch(err => {
+                console.log(err);})
 
     }
     getLocation();
@@ -45,22 +42,15 @@ var city2
     {
       var city = document.getElementById('input').value
         // fetch the url with the city and my API KEY
-          fetch('https://api.openweathermap.org/data/2.5/forecast?q='+city+'&appid='+apiKey)
-            .then(weather => weather.json())
-            .then(data => {
-                drawWeather(data)
-                console.log(data)
-            } )
-            .catch(err => {
-                console.log(err);})
+          ToFetch(city)
+        FetchPhoto(city);
 
 
     }
 
 });
     function drawWeather( d ) {
-       /* var celcius = Math.round(parseFloat(d.main.temp)-273.15);
-        var fahrenheit = Math.round(((parseFloat(d.main.temp)-273.15)*1.8)+32);*/
+
 //card1
         document.getElementById('weather1').innerHTML = d.list[0].weather[0].main;
         let now = new Date();
@@ -148,13 +138,39 @@ var city2
         let year = a.getFullYear();
         return day + " " + date + " " + month + " " + year
     }
-    function calMinMaxTemp(){
-        var temp=[d.list[0].main.temp_min,d.list[1].main.temp_min,d.list[2].main.temp_min,d.list[3].main.temp_min,d.list[4].main.temp_min,
-            d.list[5].main.temp_min,d.list[6].main.temp_min,d.list[7].main.temp_min,d.list[0].main.temp_max,d.list[1].main.temp_max,
-            d.list[2].main.temp_max,d.list[3].main.temp_max,d.list[4].main.temp_max,d.list[5].main.temp_max,d.list[6].main.temp_max,
-            d.list[7].main.temp_max]
-         let tempMax = Math.round(parseFloat(Math.max(...temp))-273.15);
-        let tempMin = Math.round(parseFloat(Math.min(...temp))-273.15);
+    function ToFetch(city){
+        var apiKey = "4950ba99cd0faf25fafb6f37967c0ead";
+        fetch('https://api.openweathermap.org/data/2.5/forecast?q='+city+'&appid='+apiKey)
+            .then(weather => weather.json())
+            .then(data => {
+                drawWeather(data)
+                console.log(data)
+            } )
+            .catch(err => {
+                console.log(err);})
 
     }
+
+    function FetchPhoto(y){
+
+        fetch('https://api.unsplash.com/search/photos?query='+y+'&client_id=qsDo-ZdWufGK_Li3mSI8baq2HeuHYjRFBrVdz1asI1k')
+            .then(cities => cities.json())
+            .then(data => {
+
+                console.log(data)
+                let backPic = [data.results[0].urls.regular,data.results[1].urls.regular,data.results[2].urls.regular,
+                    data.results[3].urls.regular,data.results[4].urls.regular,data.results[5].urls.regular,
+                    data.results[6].urls.regular,data.results[7].urls.regular,data.results[8].urls.regular,
+                    data.results[9].urls.regular]
+                var RanPic =  backPic[Math.floor(Math.random() * backPic.length)];
+
+                document.body.style.backgroundImage = "url"+"("+RanPic+")";
+            } )
+            .catch(err => {
+                console.log(err);})
+    }
+
+
+
+
 })();
