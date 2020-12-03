@@ -54,7 +54,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../js-blackjack-card-game/style.css" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../73-javascript-exercises/10-fetch/01-list-to-console/script.js" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -68,7 +68,7 @@
       <option name="presentableId" value="Default" />
       <updated>1606812091997</updated>
       <workItem from="1606812093120" duration="15122000" />
-      <workItem from="1606832406789" duration="25553000" />
+      <workItem from="1606832406789" duration="44207000" />
     </task>
     <servers />
   </component>
@@ -88,9 +88,17 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1606832733847">
+    <state x="438" y="166" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606993143973">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1606832733847" />
+    <state x="438" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1606993143973" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1606993199013">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1606993199013" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1606985794057">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1606985794057" />
   </component>
 </project>

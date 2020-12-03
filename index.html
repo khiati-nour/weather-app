@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css">
 
 <link rel="stylesheet" type="text/css" href="style.css">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
@@ -9,7 +10,7 @@
   <title>weather-app</title>
 </head>
 <body>
-<div class="container">
+<div class="container" id="container">
     <header class="header">
          <input type="text" id="input" placeholder="Search.." name="search">
 
@@ -19,141 +20,182 @@
      <main class="main">
 
 
-<div class="card1" id="card1">
+       <div class="card1" id="card1">
+       <div class = "wrap-card1" >
 
-        <div class="location1" id = "location1">
+          <div class="location1" id = "location1">
                GHENT
 
 
-        </div>
-        <div class="date1" id ="date1">
+           </div>
+          <div class="date1" id ="date1">
 
                18 july 2020
 
-        </div>
+          </div>
+          <div class="weather1" id = "weather1">
+                         sunny
 
-    <div class="temp1" id = "temp1">
+          </div>
+
+          <div class="min-max-weather1" id = "min-max-weather1" >
+                                 2°C/10°C
+
+          </div>
+       </div>
+          <div class="temp1" id = "temp1">
            10 °C
 
-    </div>
-     <div class="weather1" id = "weather1">
-               sunny
+          </div>
+          <div class= "weather-img1" id= "weather-img1">
 
-        </div>
-        <div class="min-max-weather1" id = "min-max-weather1" >
-                       2°C/10°C
+          </div>
 
-                </div>
-</div>
-<div class="card2">
 
-        <div class="location2" id = "location2">
+       </div>
+
+       <div class="card2">
+        <div class = "wrap-card2" >
+
+         <div class="location2" id = "location2">
                GHENT
 
 
-        </div>
-        <div class="date2" id ="date2">
+         </div>
+
+
+         <div class="date2" id ="date2">
 
                18 july 2020
 
-        </div>
+         </div>
+         <div class="weather2" id = "weather2">
+                        sunny
 
-    <div class="temp2" id = "temp2">
+         </div>
+
+         <div class="min-max-weather2" id = "min-max-weather2" >
+                                2°C/10°C
+
+         </div>
+         </div>
+
+       <div class="temp2" id = "temp2">
            10 °C
 
-    </div>
-     <div class="weather2" id = "weather2">
-               sunny
+       </div>
+       <div class= "weather-img2" id= "weather-img2">
+                 img2
+       </div>
 
-        </div>
-        <div class="min-max-weather2" id = "min-max-weather2" >
-                       2°C/10°C
 
-                </div>
-</div>
-<div class="card3">
+
+     </div>
+     <div class="card3">
+       <div class = "wrap-card3" >
 
         <div class="location3" id = "location3">
                GHENT
 
 
         </div>
+
         <div class="date3" id ="date3">
 
                18 july 2020
 
         </div>
-
-    <div class="temp3" id = "temp3">
-           10 °C
-
-    </div>
-     <div class="weather3" id = "weather3">
-               sunny
+        <div class="weather3" id = "weather3">
+                       sunny
 
         </div>
         <div class="min-max-weather3" id = "min-max-weather3" >
-                       2°C/10°C
+                               2°C/10°C
 
-                </div>
-</div>
-<div class="card4">
+        </div>
+       </div>
+
+        <div class="temp3" id = "temp3">
+           10 °C
+
+        </div>
+        <div class= "weather-img3" id= "weather-img3">
+                  img3
+        </div>
+
+     </div>
+     <div class="card4">
+       <div class = "wrap-card4" >
 
         <div class="location4" id = "location4">
                GHENT
 
 
         </div>
+
         <div class="date4" id ="date4">
 
                18 july 2020
 
         </div>
+        <div class="weather4" id = "weather4">
+                       sunny
 
-    <div class="temp4" id = "temp4">
-           10 °C
+         </div>
 
-    </div>
-     <div class="weather4" id = "weather4">
-               sunny
+         <div class="min-max-weather4" id = "min-max-weather4" >
+                               2°C/10°C
 
         </div>
-        <div class="min-max-weather4" id = "min-max-weather4" >
-                       2°C/10°C
+      </div>
+        <div class="temp4" id = "temp4">
+           10 °C
 
-                </div>
-</div>
-<div class="card5">
+        </div>
+        <div class= "weather-img4" id= "weather-img4">
+                  img4
+        </div>
+
+     </div>
+     <div class="card5">
+      <div class = "wrap-card5" >
 
         <div class="location5" id = "location5">
                GHENT
 
 
         </div>
+
         <div class="date5" id ="date5">
 
                18 july 2020
 
         </div>
-
-    <div class="temp5" id = "temp5">
-           10 °C
-
-    </div>
-     <div class="weather5" id = "weather5">
-               sunny
+        <div class="weather5" id = "weather5">
+                       sunny
 
         </div>
+
         <div class="min-max-weather5" id = "min-max-weather5" >
-                       2°C/10°C
+                               2°C/10°C
 
-                </div>
-</div>
+        </div>
+        </div>
 
-    </main>
-    <div class= "chart" >
-<canvas id="myChart" width="400" height="400"></canvas>
-</div>
+       <div class="temp5" id = "temp5">
+           10 °C
+
+       </div>
+       <div class= "weather-img5" id= "weather-img5">
+                 img5
+       </div>
+
+
+     </div>
+  </main>
+  <div class= "chart" >
+      <canvas id="myChart" width="500" height="200"></canvas>
+  </div>
 </div>
  <script src="./script.js"></script>
 </body>

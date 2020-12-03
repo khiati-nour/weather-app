@@ -1,25 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 body {
 
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    height: 100vh;
+
 }
 .container {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+   min-height: 100vh;
+    width: 800px;
+
+    margin: 0 auto;
+    border-radius: 16px 16px 16px 16px;
+    margin-top: 50px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: top center;
+    align-items: center;
+    align-content: center;
+    box-shadow: 5px 10px 18px rgba(0, 0, 0, 0.6)
+
+
 }
 .main {
     flex: 1 1 auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width:100%;
 
 }
 .card1 , .card2 , .card3 , .card4, .card5 {
+background-color:  rgba(0, 0, 0, 0.6); /*rgba(255, 255, 255, 0.4)*/ ;
+    margin: 10px;
+    border-radius: 16px 16px 16px 16px;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    box-shadow: 5px 10px 18px rgba(0, 0, 0, 0.6);
+}
+.card1:hover , .card2:hover , .card3:hover , .card4:hover, .card5:hover{
+    background-color: rgba(255, 255, 255, 0.2) ;
 
-    margin: 50px;
 }
 .header {
     flex: 0 0 20%;
@@ -27,14 +54,97 @@ body {
 text-align: center;
 }
 input{
-    margin-top: 50px;
+    width:  100%;
+    max-width: 280px;
+    margin: 25px;
+    padding: 10px 15px;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 16px 0px 16px 0px;
+    font-size: 20px;
+    font-weight: 300;
+    transition: 0.2s ease-out;
+    border: 1px solid coral;
+
 }
-canvas{
-    height: 100px;
-    width: 300px;
+input:focus{
+    background-color: rgba(255, 255, 255, 0.9)
+}
+.chart.canvas{
+padding: 0
 }
 .chart{
+    display: flex;
     flex: 0 0 20%;
-    height: 100px;
-    width: 300px;
+    /*height: 100px;
+    width: 300px;*/
+    margin: 0 auto;
+    padding: 0;
+}
+
+.wrap-card1, .wrap-card2, .wrap-card3, .wrap-card4, .wrap-card5{
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+.wrap-card5{
+
+}
+.temp1, .temp2, .temp3, .temp4, .temp5{
+    color: white;
+    font-size: 40px;
+    font-weight: 700;
+    text-shadow: 5px 10px 18px rgba(0, 0, 0, 0.6);
+    padding: 5px;
+    flex: 0 0 33%
+
+}
+.date1, .date2, .date3, .date4, .date5{
+    color: white;
+    font-size: 16px;
+    padding: 5px;
+}
+.weather1, .weather2, .weather3, .weather4, .weather5 {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    text-shadow: 0px 3px rgba(0, 0, 0, 0.4);
+    padding: 5px;
+}
+.min-max-weather1, .min-max-weather2, .min-max-weather3, .min-max-weather4, .min-max-weather5{
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    text-shadow: 0px 4px rgba(0, 0, 0, 0.4);
+    padding: 5px;
+}
+.location1, .location2, .location3, .location4, .location5 {
+    color:white;
+    font-size: 26px;
+    font-weight: 500;
+    text-shadow: 0px 4px rgba(0, 0, 0, 0.4);
+    padding: 5px;
+
+}
+.weather-img1, .weather-img2, .weather-img3, .weather-img4, .weather-img5{
+    flex: 0 0 33%;
+    background-repeat: no-repeat;
+
+
+}
+canvas:hover {
+    background: rgba(0, 0, 0, 0.4);
+}
+.wi wi-day-sunny{
+    font-size: 70px;
+}
+.icons {
+    color: red;
+}
+i {
+    color: red;
+    text-shadow: 2px 4px 6px orange;
+}
+.wi{
+    font-size: 50px;
 }
