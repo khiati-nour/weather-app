@@ -59,7 +59,7 @@ var apiKeyLocation = "3fb726164f694e7d96c34f856af327c4";
         document.getElementById('location1').innerHTML = d.city_name + ','+" " + d.country_code
         var tempMain1 = Math.round(d.data[0].temp) ;
         document.getElementById('temp1').innerHTML = tempMain1 + "°C";
-        document.getElementById('weather-img1').style.backgroundImage = "url"+"(https://www.weatherbit.io/static/img/icons/"+d.data[0].weather.icon+".png)";
+        document.getElementById("img1").src = "https://www.weatherbit.io/static/img/icons/"+d.data[0].weather.icon+".png";
         let tempMax1 = Math.round(d.data[0].max_temp);
         let tempMin1 = Math.round(d.data[0].min_temp);
 
@@ -71,7 +71,7 @@ var apiKeyLocation = "3fb726164f694e7d96c34f856af327c4";
 
         document.getElementById('date2').innerHTML =setDate1(now2)
         document.getElementById('location2').innerHTML = d.city_name + ','+" "+ d.country_code
-        document.getElementById('weather-img2').style.backgroundImage = "url"+"(https://www.weatherbit.io/static/img/icons/"+d.data[1].weather.icon+".png)"
+        document.getElementById("img2").src= "https://www.weatherbit.io/static/img/icons/"+d.data[1].weather.icon+".png"
             var tempMain2=  Math.round(d.data[1].temp)
         document.getElementById('temp2').innerHTML = tempMain2 + "°C";
 
@@ -86,7 +86,7 @@ var apiKeyLocation = "3fb726164f694e7d96c34f856af327c4";
         document.getElementById('location3').innerHTML = d.city_name + ','+ " " +d.country_code
         var tempMain3 = Math.round(d.data[2].temp)
         document.getElementById('temp3').innerHTML = tempMain3 + "°C"
-        document.getElementById('weather-img3').style.backgroundImage = "url"+"(https://www.weatherbit.io/static/img/icons/"+d.data[2].weather.icon+".png)"
+        document.getElementById("img3").src = "https://www.weatherbit.io/static/img/icons/"+d.data[2].weather.icon+".png"
         let tempMax3 = Math.round(d.data[2].max_temp);
         let tempMin3 = Math.round(d.data[2].min_temp);
 
@@ -99,7 +99,7 @@ var apiKeyLocation = "3fb726164f694e7d96c34f856af327c4";
         document.getElementById('location4').innerHTML = d.city_name + ','+ "" + d.country_code
         var tempMain4 = Math.round(d.data[3].temp)
         document.getElementById('temp4').innerHTML = tempMain4 + "°C"
-        document.getElementById('weather-img4').style.backgroundImage = "url"+"(https://www.weatherbit.io/static/img/icons/"+d.data[3].weather.icon+".png)"
+        document.getElementById("img4").src = "https://www.weatherbit.io/static/img/icons/"+d.data[3].weather.icon+".png"
         let tempMax4 = Math.round(d.data[3].max_temp);
         let tempMin4 = Math.round(d.data[3].min_temp);
 
@@ -112,7 +112,7 @@ var apiKeyLocation = "3fb726164f694e7d96c34f856af327c4";
         document.getElementById('location5').innerHTML = d.city_name + ','+""+ d.country_code
         var tempMain5 =  Math.round(d.data[4].temp) ;
         document.getElementById('temp5').innerHTML =  tempMain5 + "°C";
-        document.getElementById('weather-img5').style.backgroundImage = "url"+"(https://www.weatherbit.io/static/img/icons/"+d.data[4].weather.icon+".png)"
+        document.getElementById("img5").src = "https://www.weatherbit.io/static/img/icons/"+d.data[4].weather.icon+".png"
         let tempMax5 = Math.round(d.data[4].max_temp);
         let tempMin5 = Math.round(d.data[4].min_temp);
 
