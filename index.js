@@ -19,7 +19,7 @@ function showPosition(position) {
     fetch('https://api.opencagedata.com/geocode/v1/json?q=' + lat + "," + long + '&key=' + ApiLocation)
         .then(location => location.json())
         .then(data => {
-            var city2 = data.results[0].components.city_district
+            var city2 = data.results[0].components.city
             console.log(city2)
             FetchWeather(city2)
             FetchPhoto(city2);
